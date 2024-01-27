@@ -1,5 +1,19 @@
 const URL = import.meta.env.VITE_API_URL;
 
+const getAllBookings = (eventId) => {
+  return fetch(`${URL}/events/${eventId}/bookings`)
+    .then((res) => res.json())
+    .then((json) => {
+      if (json.success && json.data && json.data.payload) {
+        return json.data.payload;
+      } else {
+        console.error("Unexpected response format:", json);
+        throw new Error("Unexpected response format");
+      }
+    })
+    .catch((err) => console.error(err));
+};
+
 const getAllItems = () => {
   return fetch(`${URL}/events`)
     .then((res) => res.json())
@@ -94,4 +108,4 @@ const deleteItem = (id) => {
     });
 };
 
-export { getAllItems, getItem, deleteItem, updateItem, addItem };
+export { getAllBookings ,getAllItems, getItem, deleteItem, updateItem, addItem };
