@@ -5,11 +5,15 @@ import SingleMeeting from "./pages/singleMeeting";
 import Index from "./components/Index";
 import Bookings from "./pages/Bookings";
 import NewRoom from "./components/NewRoom";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div>
       <Router>
+      <div className="nav">
+          <NavBar />
+        </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Index />} />
