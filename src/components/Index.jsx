@@ -30,6 +30,7 @@ const Index = () => {
               eventname={item.eventname}
               capacity={item.capacity}
               floor={item.floor}
+             
             />
           </div>
         ))}
