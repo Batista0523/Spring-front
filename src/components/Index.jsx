@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllItems } from "../helpers/helperFunc";
 import Event from "../components/Event";
-import "./index.css";
-
+import './index.css'
+import { Link } from "react-router-dom";
 const Index = () => {
   const [items, setItems] = useState([]);
 
@@ -21,13 +21,7 @@ const Index = () => {
 
   return (
     <div className="container-fluid">
-        {/* ---------- guys here we new to create components for each LINK---------- */}
-      <div className="menu">
-        <a href="#">Meeting Rooms</a>
-        <a href="#">Bookings</a>
-        <a href="#">New Room</a>
-        {/* -------------this is temporary ---------------------------*/}
-      </div>
+  
       <h1 className="mb-4 text-center">Event Spaces</h1>
       <div className="row">
         {items.map((item) => (
