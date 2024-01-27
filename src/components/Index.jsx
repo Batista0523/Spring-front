@@ -21,13 +21,6 @@ const Index = () => {
 
   return (
     <div className="container-fluid">
-        {/* ---------- guys here we new to create components for each LINK---------- */}
-      {/* <div className="menu">
-        <a href="#">Meeting Rooms</a>
-        <a href="#">Bookings</a>
-        <a href="#">New Room</a> */}
-        {/* -------------this is temporary ---------------------------*/}
-      {/* </div> */}
       <h1 className="mb-4 text-center">Event Spaces</h1>
       <div className="row">
         {items.map((item) => (

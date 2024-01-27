@@ -1,20 +1,23 @@
-.menu {
-    display: flex;
-    justify-content: space-between;
+
+div {
     padding: 10px;
-    background-color: #333; 
   }
-  
-  .nav-menu {
-    color: white; 
-    text-decoration: none;
-    margin: 0;
-    padding: 10px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
  
+  .navBar-menu {
+    background-color: #343a40; 
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-menu {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+
   .nav-menu:hover {
     background-color: #555; 
   }
