@@ -1,5 +1,5 @@
 import React from 'react';
-import NewRoom from '../components/NewRoom';
+import NewRoom from '../components/NewEventRoom';
 
 const Home = () => {
     return (
