@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333; 
+  }
+  
+  .nav-menu {
+    color: white; 
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+ 
+  .nav-menu:hover {
+    background-color: #555; 
+  }
+  
