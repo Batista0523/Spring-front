@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import Home from "./pages/Home"
 import SingleMeeting from "./pages/singleMeeting";
-import SingleBooking from "./pages/singleBooking";
+import Index from "./components/Index";
 import Bookings from "./pages/Bookings";
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/bookings/:event_id" element={<SingleBooking />} />
-          <Route path="/bookings/new" element={<Bookings/>}/>;
+          <Route path="/events" element={<Index />} />
+          {/* <Route path="/bookings/:event_id" element={<SingleBooking />} /> */}
+          {/* <Route path="/bookings/new" element={<Bookings/>}/>; */}
 
         </Routes>
       </Router>
