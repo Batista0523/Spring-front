@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-
-import Home from "./pages/Home"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
 import SingleMeeting from "./pages/singleMeeting";
 import Index from "./components/Index";
 import Bookings from "./pages/Bookings";
@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <Router>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Index />} />
@@ -21,7 +22,7 @@ function App() {
         </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

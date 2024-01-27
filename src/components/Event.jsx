@@ -1,9 +1,11 @@
 import React from 'react';
-
-const Event = ({item}) => {
+import './event.css'
+const Event = ({ eventname, capacity, floor }) => {
     return (
         <div>
-            <h1>{item.eventName}</h1>
+            <h1>{eventname}</h1>
+            <p>Capacity: {capacity}</p>
+            <p>Floor: {floor}</p>  
         </div>
     );
 }
