@@ -26,8 +26,8 @@ const Event = ({ eventId, eventname, capacity, floor, startdate, enddate }) => {
         <p>Floor: {floor}</p>
       </div>
       <div className="bookings">
-        <h2>Bookings:</h2>
-        <ul>
+        {/* <h2>Bookings:</h2> */}
+        {/* <ul>
           {bookings.map((booking) => (
             <li key={booking.booking_id}>
               <p>Meeting Name: {booking.meetingname}</p>
@@ -36,7 +36,7 @@ const Event = ({ eventId, eventname, capacity, floor, startdate, enddate }) => {
               <p>Attendees: {booking.attendees}</p>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

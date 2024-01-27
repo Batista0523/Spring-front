@@ -11,7 +11,7 @@ function NavBar() {
         <Link to="/bookings/new">
           <p className="nav-menu">Bookings</p>
         </Link>
-        <Link to="/new">
+        <Link to="/newEvent">
           <p className="nav-menu">New Room</p>
         </Link>
       </div>
