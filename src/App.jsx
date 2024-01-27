@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home"
 import SingleMeeting from "./pages/singleMeeting";
 import Index from "./components/Index";
@@ -19,7 +19,7 @@ function App() {
           <Route path="/events" element={<Index />} />
           <Route path="/new" element={<NewRoom/>} />
           {/* <Route path="/bookings/:event_id" element={<SingleBooking />} /> */}
-          {/* <Route path="/bookings/new" element={<Bookings/>}/>; */}
+          <Route path="/bookings/new" element={<Bookings/>}/>;
 
         </Routes>
       </Router>

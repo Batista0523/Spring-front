@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllItems } from "../helpers/helperFunc";
 import Event from "../components/Event";
-import "./index.css";
-
+import './index.css'
+import { Link } from "react-router-dom";
 const Index = () => {
   const [items, setItems] = useState([]);
 
