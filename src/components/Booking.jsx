@@ -14,7 +14,6 @@ const Booking = ({ booking }) => {
     });
   
 
-    
     useEffect(() => {
         fetch(`${API}/events/${booking.event_id}`)
           .then((response) => response.json())
