@@ -29,10 +29,10 @@ const NewRoom = () => {
       });
 
       if (response.ok) {
-       
+
         navigate('/events');
       } else {
-        
+
         console.error('Failed to create room');
       }
     } catch (error) {
@@ -41,41 +41,50 @@ const NewRoom = () => {
   };
 
   return (
-    <div>
-      <h2>Create a New Room</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Event Name:
-          <input
-            type="text"
-            name="eventName"
-            value={meeting.eventName}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Capacity:
-          <input
-            type="number"
-            name="capacity"
-            value={meeting.capacity}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Floor:
-          <input
-            type="number"
-            name="floor"
-            value={meeting.floor}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Create Room</button>
-      </form>
+    <div className="contain">
+      <div className="bookings">
+        <ul>
+          <li className="noBorder">
+            <div className="title">Create a Room </div>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Room Name:
+                <input
+                  type="text"
+                  name="eventName"
+                  value={meeting.eventName}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <label>
+                Floor:
+                <input
+                  type="number"
+                  name="floor"
+                  value={meeting.floor}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <label>
+                Capacity:
+                <input
+                  type="number"
+                  name="capacity"
+                  value={meeting.capacity}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <button type="submit">Submit</button>
+            </form>
+          </li>
+          <br></br>
+          <hr></hr>
+        </ul>
+
+      </div>
     </div>
   );
 };
