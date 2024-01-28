@@ -1,22 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./event.css";
-import { getAllBookings } from "../helpers/helperFunc";
 
-const Event = ({ eventId, eventname, capacity, floor, startdate, enddate }) => {
-  const [bookings, setBookings] = useState([]);
-
-  useEffect(() => {
-    const fetchBookings = async () => {
-      try {
-        const response = await getAllBookings(eventId);
-        setBookings(response);
-      } catch (error) {
-        console.error("Error fetching bookings", error);
-      }
-    };
-
-    fetchBookings();
-  }, [eventId]);
+const Event = ({  eventname, capacity, floor }) => {
 
   return (
     <div>
