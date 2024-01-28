@@ -7,10 +7,11 @@ import IndexBooking from "./components/IndexBooking";
 import ShowBooking from "./components/ShowBooking";
 import NewRoom from "./components/NewEventRoom";
 import NewBooking from "./components/NewBookingRoom";
+import "./App.css"
 
 function App() {
   return (
-    <div>
+    <div className="main">
       <Router>
         <NavBar />
         <Routes>
