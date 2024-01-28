@@ -1,24 +1,31 @@
+.contain-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-div {
-    padding: 10px;
-  }
- 
-  .navBar-menu {
-    background-color: #343a40; 
+.navBar-menu {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    background-color: #BEBEBE;
     display: flex;
     justify-content: space-around;
-  }
+    border-radius: 10px;
+    border-style: solid;
+    width: 530px;
+    font-size: 25px;
+}
 
-  .nav-menu {
-    color: #fff;
+.nav-menu {
+    color: black;
     text-decoration: none;
-    padding: 10px;
     border-radius: 4px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
+    padding: 19px;
+    margin: 2px;
+}
 
-  .nav-menu:hover {
-    background-color: #555; 
-  }
-  
+
+.nav-menu:hover {
+    background-color: white;
+}
