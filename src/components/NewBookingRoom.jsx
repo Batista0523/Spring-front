@@ -11,12 +11,27 @@ const NewBooking = () => {
     startDate: new Date().toISOString(),
     endDate: new Date().toISOString(),
     attendees: '',
-    event_id: 0,
+    event_id: 1,
   });
+  const [bookings, setBookings] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBooking((prevBooking) => ({ ...prevBooking, [name]: value }));
+  };
+
+  const fetchBookings = async () => {
+    try {
+      const response = await fetch(`${API}/events/${booking.event_id}/bookings`);
+      if (response.ok) {
+        const data = await response.json();
+        setBookings(data);
+      } else {
+        console.error('Failed to fetch bookings');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -32,6 +47,7 @@ const NewBooking = () => {
       });
 
       if (response.ok) {
+        await fetchBookings();
         navigate(`/events/${booking.event_id}/bookings`);
       } else {
         console.error('Failed to create booking');
@@ -106,6 +122,24 @@ const NewBooking = () => {
         <br />
         <button type="submit">Create Booking</button>
       </form>
+
+      <div>
+        <h2>Bookings for Event {booking.eventname}</h2>
+        {bookings.length > 0 ? (
+          <ul>
+            {bookings.map((item) => (
+              <li key={item.booking_id}>
+                <strong>{item.meetingname}</strong> - Room ID: {item.meetinginroomid}<br />
+                Start: {new Date(item.startDate).toLocaleString()}<br />
+                End: {new Date(item.endDate).toLocaleString()}<br />
+                Attendees: {item.attendees}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No bookings available for this event.</p>
+        )}
+      </div>
     </div>
   );
 };

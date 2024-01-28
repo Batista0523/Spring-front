@@ -2,6 +2,7 @@
 
 .container-fluid {
     margin: 20px;
+    
   }
   
   h1 {
@@ -10,8 +11,11 @@
   }
   
   .find-menu {
- text-align: start;
+
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .find-menu h3 {
@@ -36,10 +40,11 @@
   }
   
   .btn-find {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
+    background-color: white;
+    color: black;
+    border: solid;
+    border-radius: 10px;
+    width: 80px;
     cursor: pointer;
   }
   
@@ -47,6 +52,28 @@
     margin-top: 20px;
   }
   
+  .line{
+    width: 500px;
+    margin-bottom: -20px;
+    margin-top: -15px;
+  }
+
+  button{
+    background-color: white;
+    box-shadow: none;
+    border-style: solid;
+    border-radius: 5px;
+    width:65px;
+    cursor: pointer;
+  }
 
 
+.noBorder{
+  border: none;
+  border-style: none;
+  border-color: transparent;
+}
   
+input{
+margin-bottom: 6px;
+}
