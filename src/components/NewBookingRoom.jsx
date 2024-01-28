@@ -49,7 +49,7 @@ const NewBooking = () => {
 
       if (response.ok) {
         await fetchBookings();
-        navigate(`/events/${booking.event_id}/bookings`);
+        navigate(`/events/${booking.event_id}`);
       } else {
         console.error('Failed to create booking');
       }
