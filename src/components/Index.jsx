@@ -145,7 +145,7 @@ const Index = () => {
         </ul>
       </div>
       <hr className="line"></hr>
-      <div className="bookings">
+      <div className="bookingsV2">
         <ul>
           {items.map((item) => (
             <Link to={`/events/${item.event_id}`} key={item.event_id}>

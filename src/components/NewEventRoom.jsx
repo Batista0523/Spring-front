@@ -78,10 +78,13 @@ const NewRoom = () => {
               </label>
               <br />
               <button type="submit">Submit</button>
+              <br></br>
+              <br></br>
+              <hr></hr>
             </form>
           </li>
           <br></br>
-          <hr></hr>
+          
         </ul>
 
       </div>

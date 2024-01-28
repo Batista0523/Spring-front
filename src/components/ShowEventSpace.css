@@ -1,0 +1,32 @@
+.heading{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.eventName{
+    margin-left: 10px;
+}
+
+.capacity{
+    margin-right: 40px;
+}
+
+.floor{
+    margin-right: 40px;
+}
+
+.lineV2{
+    width: 500px;
+}
+
+.title-variation{
+    margin-top: -5px;
+}
+
+.alternate{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size: larger;
+}

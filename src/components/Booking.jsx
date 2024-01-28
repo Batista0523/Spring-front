@@ -3,29 +3,37 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './Booking.css'
 import { getAllBookings } from "../helpers/helperFunc";
+import { getAllItems } from "../helpers/helperFunc";
 const API = import.meta.env.VITE_API_URL
-
-const Booking = ({ floor, eventname, eventId:event_id }) => {
-    const [bookings, setAllBookings] = useState([]);
-
+const Booking = ({ booking }) => {
+    const [event, setEvent] = useState({
+        event_id:0,
+        eventname:"",
+        capacity:0,
+        floor:0
+    });
+  
     useEffect(() => {
-        fetch(`${API}/bookings`)
-            .then((response) => response.json())
-            .then((bookings) => {
-                setAllBookings(bookings)
-            })
-            .catch((error) => {
-                console.error("Error fetching data: ", error)
-            })
-    }, [])
+        fetch(`${API}/events/${booking.event_id}`)
+          .then((response) => response.json())
+          .then((event) => {
+            setEvent(event)
+          })
+          .catch((error) => {
+            console.error("Error fetching data: ", error)
+          })
+      }, [booking.event_id])
+
+
+
     return (
         <div className="bookings">
             <ul>
-                {bookings.map((booking) => (
-                    <Link to={`/events/${event_id}/bookings/${booking.booking_id}`} key={booking.booking_id}>
+                {/* {bookings.length>0?bookings.map((booking) => ( */}
+                    <Link to={`/events/${event.event_id}/bookings/${booking.booking_id}`} key={booking.booking_id}>
                         <li key={booking.booking_id}>
                             <h1>{booking.meetingname}</h1>
-                            <h2>{eventname}</h2>
+                            <h2>{event.eventname}</h2>
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-stopwatch" viewBox="0 0 16 16">
                                     <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z" />
@@ -47,11 +55,11 @@ const Booking = ({ floor, eventname, eventId:event_id }) => {
                                     <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z" />
                                     <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
                                 </svg> &nbsp;
-                                Floor: {floor}
+                                Floor: {event.floor}
                             </p>
                         </li>
                     </Link>
-                ))}
+                {/* )):""} */}
             </ul>
         </div>
     );

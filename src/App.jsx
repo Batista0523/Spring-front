@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import SingleMeeting from "./pages/singleMeeting";
 import Index from "./components/Index";
+import ShowEventSpace from "./components/ShowEventSpace";
 import IndexBooking from "./components/IndexBooking";
 import ShowBooking from "./components/ShowBooking";
 import NewRoom from "./components/NewEventRoom";
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Index />} />
+          <Route path="/events/:event_id" element={<ShowEventSpace />} />
           <Route path="/bookings" element={<IndexBooking />} />
           <Route path="/events/:event_id/bookings/:booking_id" element={<ShowBooking />} />
           <Route path="/newEvent" element={<NewRoom/>} />
