@@ -38,7 +38,7 @@ const ShowEventSpace = () => {
     }, [event_id])
 
     return (
-        <div className="bookings">
+        <div className="bookingsV2">
             <ul>
                 <div className="heading">
                     <h2 className="eventName">{event.eventname}</h2>
