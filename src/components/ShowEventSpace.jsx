@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from "react-router-dom"
 import "./ShowEventSpace.css"
+import NewBooking from './NewBookingRoom';
 const API = import.meta.env.VITE_API_URL
 
 const ShowEventSpace = () => {
@@ -39,6 +40,7 @@ const ShowEventSpace = () => {
 
     return (
         <div className="bookingsV2">
+           
             <ul>
                 <div className="heading">
                     <h2 className="eventName">{event.eventname}</h2>
@@ -56,7 +58,7 @@ const ShowEventSpace = () => {
                     </p>
                 </div>
                 <hr className="lineV2" ></hr>
-                new booking here
+                <NewBooking/>
                 <hr className="lineV2" ></hr>
                 {bookings.length > 0 ? bookings.map((booking) => (
                     <Link to={`/events/${event_id}/bookings/${booking.booking_id}`} key={booking.booking_id}>

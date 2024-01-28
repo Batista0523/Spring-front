@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -122,24 +123,6 @@ const NewBooking = () => {
         <br />
         <button type="submit">Create Booking</button>
       </form>
-
-      <div>
-        <h2>Bookings for Event {booking.eventname}</h2>
-        {bookings.length > 0 ? (
-          <ul>
-            {bookings.map((item) => (
-              <li key={item.booking_id}>
-                <strong>{item.meetingname}</strong> - Room ID: {item.meetinginroomid}<br />
-                Start: {new Date(item.startDate).toLocaleString()}<br />
-                End: {new Date(item.endDate).toLocaleString()}<br />
-                Attendees: {item.attendees}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No bookings available for this event.</p>
-        )}
-      </div>
     </div>
   );
 };
