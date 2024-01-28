@@ -8,10 +8,10 @@ function NavBar() {
         <Link to="/">
           <p className="nav-menu">Meeting Rooms</p>
         </Link>
-        <Link to="/bookings/new">
+        <Link to="/bookings">
           <p className="nav-menu">Bookings</p>
         </Link>
-        <Link to="/new">
+        <Link to="/newEvent">
           <p className="nav-menu">New Room</p>
         </Link>
       </div>
