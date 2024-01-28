@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './Booking.css'
 import { getAllBookings } from "../helpers/helperFunc";
+const API = import.meta.env.VITE_API_URL
+
 const Booking = ({ floor, eventname, eventId:event_id }) => {
-    const [bookings, setBookings] = useState([]);
+    const [bookings, setAllBookings] = useState([]);
 
     useEffect(() => {
-        const fetchBookings = async () => {
-            try {
-                const response = await getAllBookings(event_id);
-                setBookings(response);
-            } catch (error) {
-                console.error("Error fetching bookings", error);
-            }
-        };
-
-        fetchBookings();
-    }, [event_id]);
+        fetch(`${API}/bookings`)
+            .then((response) => response.json())
+            .then((bookings) => {
+                setAllBookings(bookings)
+            })
+            .catch((error) => {
+                console.error("Error fetching data: ", error)
+            })
+    }, [])
     return (
         <div className="bookings">
             <ul>
