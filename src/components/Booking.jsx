@@ -13,6 +13,7 @@ const Booking = ({ booking }) => {
         floor:0
     });
   
+    
     useEffect(() => {
         fetch(`${API}/events/${booking.event_id}`)
           .then((response) => response.json())
