@@ -54,8 +54,9 @@
   
   .line{
     width: 500px;
-    margin-bottom: -20px;
-    margin-top: -15px;
+    margin-top: 75px;
+    margin-bottom: -100px;
+    color: black;
   }
 
   button{
@@ -76,4 +77,36 @@
   
 input{
 margin-bottom: 6px;
+}
+
+.bookingsV2 {
+  margin-top: 110px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.bookingsV2 h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.bookingsV2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bookingsV2 li {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  width: 500px;
 }

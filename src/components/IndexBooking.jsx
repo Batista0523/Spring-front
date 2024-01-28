@@ -2,35 +2,32 @@ import React, { useState, useEffect } from "react";
 import { getAllItems } from "../helpers/helperFunc";
 import Booking from "../components/Booking";
 import './index.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { getAllBookings } from "../helpers/helperFunc";
+const API = import.meta.env.VITE_API_URL
+
 const IndexBooking = () => {
-  const [items, setItems] = useState([]);
+  const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    const fetchItems = async () => {
-      try {
-        const response = await getAllItems();
-        setItems(response);
-      } catch (error) {
-        console.error("Error fetching items", error);
-      }
-    };
-
-    fetchItems();
-  }, []);
+    fetch(`${API}/bookings`)
+      .then((response) => response.json())
+      .then((data) => {
+        setBookings(data)
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error)
+      })
+  }, [])
 
   return (
     <div className="container-fluid">
       {/* <h1 className="mb-4 text-center">Event Spaces</h1> */}
       <div className="row">
-        {items.map((item) => (
-          <div key={item.event_id} className="col-lg-4 col-md-6 mb-4">
+        {bookings.map((booking) => (
+          <div key={booking.booking_id} className="col-lg-4 col-md-6 mb-4">
             <Booking
-              eventId={item.event_id}
-              eventname={item.eventname}
-              capacity={item.capacity}
-              floor={item.floor}
-             
+              booking={booking}
             />
           </div>
         ))}
