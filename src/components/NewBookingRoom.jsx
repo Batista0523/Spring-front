@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,11 +5,17 @@ const API = import.meta.env.VITE_API_URL;
 
 const NewBooking = () => {
   const navigate = useNavigate();
+
+  const formatISOWithoutSecondsAndMilliseconds = (date) => {
+    const isoString = date.toISOString();
+    return isoString.slice(0, isoString.lastIndexOf(':'));
+  };
+
   const [booking, setBooking] = useState({
     meetingName: '',
     meetingInRoomId: 0,
-    startDate: new Date().toISOString(),
-    endDate: new Date().toISOString(),
+    startDate: formatISOWithoutSecondsAndMilliseconds(new Date()),
+    endDate: formatISOWithoutSecondsAndMilliseconds(new Date()),
     attendees: '',
     event_id: 1,
   });
@@ -110,8 +115,6 @@ const NewBooking = () => {
             onChange={handleChange}
           />
         </label>
-        <br />
-       
         <br />
         <button type="submit">Create Booking</button>
       </form>
