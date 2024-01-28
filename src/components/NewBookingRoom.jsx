@@ -111,15 +111,7 @@ const NewBooking = () => {
           />
         </label>
         <br />
-        <label>
-          Event ID:
-          <input
-            type="number"
-            name="event_id"
-            value={booking.event_id}
-            onChange={handleChange}
-          />
-        </label>
+       
         <br />
         <button type="submit">Create Booking</button>
       </form>
