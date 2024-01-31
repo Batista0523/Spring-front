@@ -11,8 +11,8 @@ export const LoginWrapper = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
   padding-bottom: 40px;
-  background: linear-gradient(116.82deg, #03045e -5%, #00b4d8 100%);
-  min-height: 85vh;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+  min-height: 105vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
   rgba(0, 0, 0, 0.12) 0px -12px 30px,
   rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -24,15 +24,27 @@ export const LoginBackground = styled.form`
   position: absolute;
   width: 460px;
   height: 400px;
-  top: 35%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #3a4664;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+  background-image: url("testBack1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-size: cover; 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 0px 10px 10px 2px rgba(51, 51, 51, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+  rgba(0, 0, 0, 0.9) 0px -3px 5px;
   border-radius: 10px;
   padding: 0 0 77px 0;
   box-sizing: border-box;
@@ -134,6 +146,9 @@ export const LoginLabel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+  border-radius:20px;
+  margin-bottom:5px;
   
 
   @media screen and (max-width: 480px) {
@@ -151,8 +166,9 @@ export const LoginHeader = styled.h2`
   font-size: 26px;
   line-height: 30px;
   text-align: center;
-  margin-bottom: 15px;
-  color: #f2f2f2;
+  margin-bottom: 2px;
+  margin-top:5px;
+  color:white;
 
   @media screen and (max-width: 480px) {
     width: 299px;
@@ -261,11 +277,14 @@ export const ErrorList2 = styled.ul`
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: #f2f2f2;
   width:300px;
+
+  border-radius: 20px;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
 
   @media screen and (max-width: 480px) {
     width: 299px;
@@ -311,7 +330,6 @@ export const FormInput = styled.input`
 export const LoginButton = styled.button`
   width: 300px;
   height: 50px;
-  background: #FF5B90;
   border: none;
   border-radius: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -321,16 +339,24 @@ export const LoginButton = styled.button`
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
+
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+  rgba(0, 0, 0, 0.9) 0px -3px 5px;
 
   &:focus{
       outline: none;
   }
 `
 
-export const LoginButton2 = styled.button`
-  width: 150px;
+export const LoginButton2 = styled.button`  
+  width: 300px;
   height: 50px;
-  background: #FF5B90;
+  
   border: none;
   border-radius: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -340,6 +366,15 @@ export const LoginButton2 = styled.button`
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
+  
+
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+  rgba(0, 0, 0, 0.9) 0px -3px 5px;
 
   &:focus{
       outline: none;
@@ -444,7 +479,6 @@ export const LoginButton7 = styled.button`
 export const OkButton = styled.button`
   width: 150px;
   height: 50px;
-  background: #FF5B90;
   border: none;
   border-radius: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -454,6 +488,7 @@ export const OkButton = styled.button`
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
 
   &:focus{
       outline: none;
