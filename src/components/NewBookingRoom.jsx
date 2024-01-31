@@ -64,60 +64,64 @@ const NewBooking = () => {
   };
 
   return (
-    <div>
-      <h2>Create a New Booking</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Meeting Name:
-          <input
-            type="text"
-            name="meetingName"
-            value={booking.meetingName}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Meeting Room ID:
-          <input
-            type="number"
-            name="meetingInRoomId"
-            value={booking.meetingInRoomId}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Start Date:
-          <input
-            type="datetime-local"
-            name="startDate"
-            value={booking.startDate}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          End Date:
-          <input
-            type="datetime-local"
-            name="endDate"
-            value={booking.endDate}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Attendees:
-          <textarea
-            name="attendees"
-            value={booking.attendees}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Create Booking</button>
-      </form>
+    <div className="booking">
+      <ul>
+        <li>
+          <h2>Create a New Booking</h2>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Meeting Name:
+              <input
+                type="text"
+                name="meetingName"
+                value={booking.meetingName}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <label>
+              Meeting Room ID:
+              <input
+                type="number"
+                name="meetingInRoomId"
+                value={booking.meetingInRoomId}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <label>
+              Start Date:
+              <input
+                type="datetime-local"
+                name="startDate"
+                value={booking.startDate}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <label>
+              End Date:
+              <input
+                type="datetime-local"
+                name="endDate"
+                value={booking.endDate}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <label>
+              Attendees:
+              <textarea
+                name="attendees"
+                value={booking.attendees}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <button type="submit">Create Booking</button>
+          </form>
+        </li>
+      </ul>
     </div>
   );
 };
