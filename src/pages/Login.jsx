@@ -95,7 +95,7 @@ const Login = ({ setCurrentUser }) => {
   }
 
   return (
-    <div>
+    <div className="animate__zoomInDown">
       <LoginBackground onSubmit={handleSubmit}>
         {
           !errors.length ?

@@ -11,8 +11,9 @@ import {
     LoginHeaderV2,
     LoginHeaderV3,
     LoginLabel,
-    LoginButton7
+    LoginButton2
 } from '../styles/loginElements';
+import "./SignUpForm.css"
 const API = import.meta.env.VITE_API_URL
 
 export default function SignUpForm({ setCurrentUser }) {
@@ -74,14 +75,13 @@ export default function SignUpForm({ setCurrentUser }) {
     return (
         <div className="form-new-user">
             <LoginBackground3 >
-                <LoginLabel>
-                    <LoginHeaderV3>Sign Up</LoginHeaderV3>
-                </LoginLabel>
+
+                <LoginHeaderV3>Sign Up</LoginHeaderV3>
+
 
                 <Form className="form" noValidate onSubmit={handleSubmit}>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="username">
-                            <LoginHeaderV2>Username</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 required
@@ -95,12 +95,11 @@ export default function SignUpForm({ setCurrentUser }) {
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="email">
-                            <LoginHeaderV2>Email</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="email"
                                 type="text"
-                                placeholder="@"
+                                placeholder="email"
                                 value={user.email}
                                 onChange={handleInputChange}
                             />
@@ -108,7 +107,6 @@ export default function SignUpForm({ setCurrentUser }) {
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="firstname">
-                            <LoginHeaderV2>First Name</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="firstname"
@@ -121,7 +119,6 @@ export default function SignUpForm({ setCurrentUser }) {
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="lastname">
-                            <LoginHeaderV2>Last Name</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="lastname"
@@ -134,7 +131,6 @@ export default function SignUpForm({ setCurrentUser }) {
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="password">
-                            <LoginHeaderV2>Password</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="password"
@@ -147,9 +143,9 @@ export default function SignUpForm({ setCurrentUser }) {
                     </Row>
                     <br></br>
                     <br></br>
-                    <LoginButton7 className="btn btn-secondary btn-sm" type="submit">
+                    <LoginButton2 className="btn btn-secondary btn-sm" type="submit">
                         Create User
-                    </LoginButton7>
+                    </LoginButton2>
 
                 </Form>
             </LoginBackground3>

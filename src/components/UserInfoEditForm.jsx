@@ -11,17 +11,18 @@ import {
     LoginHeaderV2,
     LoginHeaderV3,
     LoginLabel,
-    LoginButton7
-} from '../../styles/loginElements'
+    LoginButton2
+} from '../styles/loginElements'
 const API = import.meta.env.VITE_API_URL
 
 export default function UserInfoEditForm({ setCurrentUser, currentUser }) {
+    const [user,setUser] = useState(currentUser)
     const navigate = useNavigate()
     const editUser = () => {
         e.preventDefault()
         fetch(`${API}/users/${currentUser.user_id}`, {
             method: "PUT",
-            body: JSON.stringify(currentUser),
+            body: JSON.stringify(user),
             headers: {
                 "Content-Type": "application/json",
             },
@@ -65,81 +66,76 @@ export default function UserInfoEditForm({ setCurrentUser, currentUser }) {
         <div className="form-new-user">
             <LoginBackground3 >
                 <LoginLabel>
-                    <LoginHeaderV3>Sign Up</LoginHeaderV3>
+                    
                 </LoginLabel>
 
                 <Form className="form" noValidate onSubmit={handleSubmit}>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="username">
-                            <LoginHeaderV2>Username</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 required
                                 name="username"
                                 type="text"
                                 placeholder="username"
-                                value={user.username}
+                                value={currentUser.username}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="email">
-                            <LoginHeaderV2>Email</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="email"
                                 type="text"
                                 placeholder="@"
-                                value={user.email}
+                                value={currentUser.email}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="firstname">
-                            <LoginHeaderV2>First Name</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="firstname"
                                 type="text"
                                 placeholder="first name"
-                                value={user.firstname}
+                                value={currentUser.firstname}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="lastname">
-                            <LoginHeaderV2>Last Name</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="lastname"
                                 type="text"
                                 placeholder="last name"
-                                value={user.lastname}
+                                value={currentUser.lastname}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="password">
-                            <LoginHeaderV2>Password</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 name="password"
                                 type="text"
                                 placeholder="password"
-                                value={user.password}
+                                value={currentUser.password}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <br></br>
                     <br></br>
-                    <LoginButton7 className="btn btn-secondary btn-sm" type="submit">
+                    <LoginButton2 className="btn btn-secondary btn-sm" type="submit">
                         Update User
-                    </LoginButton7>
+                    </LoginButton2>
 
                 </Form>
             </LoginBackground3>

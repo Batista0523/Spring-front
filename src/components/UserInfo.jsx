@@ -10,9 +10,12 @@ import {
     AboutHeader,
     AboutContent,
     ProfileNavBottom,
+} from '../styles/portalElements'
+import {
     LoginButton2
-} from '../../styles/portalElements'
-import profile from "../../assets/profile.svg"
+} from '../styles/loginElements'
+import profile from "../assets/profile.svg"
+import "../assets/testBack1.jpeg" 
 import { useNavigate, Link } from "react-router-dom"
 import "./UserInfo.css"
 const API = import.meta.env.VITE_API_URL
@@ -43,7 +46,7 @@ const UserInfo = ({ currentUser, setCurrentUser }) => {
                 <ContactItem2>
                     {
                         currentUser.profile_img === "profile image" ?
-                            <img src={profile} /> :
+                            <img src={profile} style={{ height: "90px" }} /> :
                             <img className="pic" src={currentUser.profile_img} />
                     }
                 </ContactItem2>

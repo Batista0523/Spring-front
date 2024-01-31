@@ -3,7 +3,18 @@ import { getAllItems } from "../helpers/helperFunc";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Event from "../components/Event";
-import { LoginWrapper } from "../styles/loginElements";
+import Form from "react-bootstrap/Form"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
+import {
+  LoginWrapper,
+  LoginBackground3,
+  LoginHeaderV3,
+  LoginButton2,
+  LoginButton,
+  LoginButton3,
+  LoginButton4
+} from "../styles/loginElements";
 import "./index.css";
 
 const Index = () => {
@@ -64,6 +75,96 @@ const Index = () => {
   return (
 
     <div className="container-fluid">
+      {/* <LoginBackground3 >
+
+        <LoginHeaderV3>Find available rooms:</LoginHeaderV3>
+
+
+        <Form className="form" noValidate onSubmit={handleSubmit}>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="startdate">
+              <Form.Control
+                className="useLoginStyle"
+                required
+                name="startdate"
+                type="date"
+                placeholder="Start Date"
+                value={finding.startdate}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="starttime">
+              <Form.Control
+                className="useLoginStyle"
+                required
+                name="starttime"
+                type="time"
+                placeholder="Start Time"
+                value={finding.starttime}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="enddate">
+              <Form.Control
+                className="useLoginStyle"
+                name="enddate"
+                type="date"
+                placeholder="End Date"
+                value={finding.enddate}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="endtime">
+              <Form.Control
+                className="useLoginStyle"
+                name="endtime"
+                type="time"
+                placeholder="End Time"
+                value={finding.endtime}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="floor">
+              <Form.Control
+                className="useLoginStyle"
+                name="floor"
+                type="number"
+                placeholder="Floor"
+                value={finding.floor}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="capacity">
+              <Form.Control
+                className="useLoginStyle"
+                name="capacity"
+                type="number"
+                placeholder="Capacity"
+                value={finding.capacity}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+          </Row>
+          <br></br>
+          <LoginButton2 className="submit" type="submit"  >
+            <span>Find</span>
+          </LoginButton2>
+          <LoginButton2 className="clear" onClick={handleReset} >
+            <span>Reset</span>
+          </LoginButton2>
+
+        </Form>
+      </LoginBackground3> */}
 
       <div className="bookings">
         <ul>
@@ -135,12 +236,14 @@ const Index = () => {
                   required
                 />
                 <br></br>
-                <button className="submit" type="submit"  >
-                  <span>Find</span>
-                </button>
-                <button className="clear" onClick={handleReset} >
-                  <span>Reset</span>
-                </button>
+                <div className="test2">
+                  <LoginButton3 className="submit" type="submit"  >
+                    Find
+                  </LoginButton3>
+                  <LoginButton3 className="clear" onClick={handleReset} >
+                    Reset
+                  </LoginButton3>
+                </div>
               </div>
             </form>
           </li>

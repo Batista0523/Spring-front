@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './newRoom.css'
 const API = import.meta.env.VITE_API_URL;
+import {
+  LoginButton3
+} from "../styles/loginElements";
 
 const NewRoom = () => {
   const navigate = useNavigate();
@@ -41,12 +44,12 @@ const NewRoom = () => {
   };
 
   return (
-    <div className="contain">
+    <div className="contain animate__zoomInDown">
       <div className="bookings">
         <ul>
           <li className="noBorder">
-            <div className="title">Create a Room </div>
-            <form onSubmit={handleSubmit}>
+            {/* <div className="title">Create a Room </div> */}
+            <form onSubmit={handleSubmit} className="test-form">
               <label>
                 Room Name:
                 <input
@@ -77,7 +80,7 @@ const NewRoom = () => {
                 />
               </label>
               <br />
-              <button type="submit">Submit</button>
+              <LoginButton3 type="submit">Create a Room</LoginButton3>
               <br></br>
               <br></br>
               <hr></hr>

@@ -4,10 +4,20 @@ import Booking from "../components/Booking";
 import './index.css'
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getAllBookings } from "../helpers/helperFunc";
+import Button from "react-bootstrap/Button";
+import "animate.css"
+
+import {
+  LoginButton,
+  LoginButton2
+} from '../styles/loginElements'
+
 const API = import.meta.env.VITE_API_URL
 
 const IndexBooking = () => {
   const [bookings, setBookings] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [bookingsPerPage, setBookingsPerPage] = useState(3);
 
   useEffect(() => {
     fetch(`${API}/bookings`)
@@ -20,10 +30,16 @@ const IndexBooking = () => {
       })
   }, [])
 
+  const indexOfLastBooking = currentPage * bookingsPerPage;
+  const indexOfFirstBooking = indexOfLastBooking - bookingsPerPage;
+  const currentBookings = bookings.slice(indexOfFirstBooking, indexOfLastBooking);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
-    <div className="container-fluid">
-      <div >
-        {bookings.map((booking) => (
+    <div className="container-fluid animate__zoomInDown">
+      <div  >
+        {currentBookings.map((booking) => (
           <div key={booking.booking_id} >
             <Booking
               booking={booking}
@@ -31,6 +47,25 @@ const IndexBooking = () => {
           </div>
         ))}
       </div>
+      <div className="booking-container-pagination">
+          <LoginButton2
+            className="atlBtnColor"
+            onClick={() => paginate(currentPage - 1)}
+            disabled={currentPage === 1}
+            
+          >
+            Previous
+          </LoginButton2>
+          <span>Page {currentPage}</span>
+          <LoginButton2
+            className="atlBtnColor"
+            onClick={() => paginate(currentPage + 1)}
+            disabled={indexOfLastBooking >= bookings.length}
+            
+          >
+            Next
+          </LoginButton2>
+        </div>
     </div>
   );
 };
