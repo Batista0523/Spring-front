@@ -14,6 +14,7 @@ import "./App.css"
 function App() {
   return (
     <div className="main">
+      <div className="mainL2">
       <LoginWrapper>
         <Router>
           <NavBar />
@@ -30,6 +31,7 @@ function App() {
           </Routes>
         </Router>
       </LoginWrapper>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,13 @@
 body {
-    
+    background-image: url("testBack2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #faf7f2;
-    font-family:'Times New Roman', Times, serif;
-    }
+    font-family: 'Times New Roman', Times, serif;
+
+
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-size: cover;
+}
