@@ -8,7 +8,7 @@ function NavBar({ currentUser, setCurrentUser }) {
       <div className="navbar">
         <div className="navbar navbar-expand-lg navbar-dark bg-dark ">
           <div className="navbar test" >
-            <Link to="/">
+            <Link to="/events">
               <p className="nav-menu left">Meeting Rooms</p>
             </Link>
             <Link to="/bookings">

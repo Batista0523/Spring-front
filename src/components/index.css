@@ -115,3 +115,24 @@ a{
               rgba(0, 0, 0, 0.17) 0px 12px 13px, 
               rgba(0, 0, 0, 0.9) 0px -3px 5px;
 }
+
+.test{
+  justify-content: center;
+  align-items: center;
+}
+
+.test2{
+display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-container-pagination{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 100px;
+  margin-top: 40px;
+  margin-left: -20px;
+  margin-top:-20px;
+}

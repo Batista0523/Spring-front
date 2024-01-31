@@ -12,9 +12,11 @@ export const ProfileWrapper = styled.div`
 
 export const SideRail = styled.div`
   width: 30px;
-  height: 114.5vh;
-  margin-top: -4px;
-  background: #FF5B90;
+  min-height: 111.5vh;
+  margin-top: -50px;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+  border-radius: 5px;
+  
 
   @media screen and (max-width: 480px) {
     height: 20px;
@@ -111,7 +113,7 @@ export const ContactWrapper = styled.div`
 
   width: 646px;
   height: 97px;
-  background: rgba(190, 190, 192, 0.1);
+  background: none;
   border-radius: 10px;
   padding: 27px 37px;
   display: flex;
@@ -141,7 +143,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   font-style: normal;
   font-size: 19px;
   line-height: 19px;
-  color: #000000;
+  color: white;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 3vh;
@@ -151,8 +153,9 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 `
 
 export const ContactItem2 = styled.div`
-  margin-top: -40px;
-  margin-left: -100px;
+  margin-top: 20px;
+  margin-left: 40px;
+  background-color:none;
 `
 
 export const ContactDescription = styled.span`
@@ -186,7 +189,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
-  color: #000000;
+  color: white;
   margin-top: 40px;
   margin-bottom: 10px;
   text-align:left;
@@ -205,7 +208,7 @@ export const AboutContent = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: white;
   text-align:left;
 `
 

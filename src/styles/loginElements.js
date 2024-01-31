@@ -12,7 +12,7 @@ export const LoginWrapper = styled.div`
   margin-bottom: 5px;
   padding-bottom: 40px;
   background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
-  min-height: 105vh;
+  min-height: 115vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
   rgba(0, 0, 0, 0.12) 0px -12px 30px,
   rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -29,7 +29,7 @@ export const LoginBackground = styled.form`
   transform: translate(-50%, -50%);
   background: #3a4664;
   background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
-  background-image: url("testBack1.jpeg");
+  background-image: url("../../../testBack1.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -91,8 +91,8 @@ export const LoginBackground3 = styled.div`
 
   position: absolute;
   width: 560px;
-  height: 680px;
-  top: 50%;
+  height: 540px;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #3a4664;
@@ -100,10 +100,23 @@ export const LoginBackground3 = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 0px 10px 10px 2px rgba(51, 51, 51, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        #48cae4 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        #48cae4 0px 12px 13px,
+        #03045e 0px -3px 5px;
+
   border-radius: 10px;
+
   padding: 0 0 77px 0;
   box-sizing: border-box;
+
+  transform: translate(-50%, -50%);
+  background: #3a4664;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
+  background-image: url("../../../testBack6.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media screen and (max-width: 480px) {
     position: fixed;
@@ -181,7 +194,10 @@ export const LoginHeader = styled.h2`
 
 export const LoginHeaderV3 = styled.h2`
   width: 259px;
-  height: 25px;
+  height: 35px;
+  margin-top: 10px;
+  border-radius:20px;
+  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -189,6 +205,7 @@ export const LoginHeaderV3 = styled.h2`
   line-height: 30px;
   text-align: center;
   color: #f2f2f2;
+  background-color: #282828;
 
   @media screen and (max-width: 480px) {
     width: 299px;
@@ -210,7 +227,7 @@ export const LoginHeaderV2 = styled.h4`
   line-height: 30px;
   text-align: left;
   
-  color: #f2f2f2;
+  color: black;
 
   @media screen and (max-width: 480px) {
     width: 299px;
@@ -371,10 +388,10 @@ export const LoginButton2 = styled.button`
   background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px,
-  rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-  rgba(0, 0, 0, 0.9) 0px -3px 5px;
+  #48cae4 0px -12px 30px,
+  #03045e 0px 4px 6px,
+  #48cae4 0px 12px 13px,
+  #03045e 0px -3px 5px;
 
   &:focus{
       outline: none;
@@ -384,7 +401,7 @@ export const LoginButton2 = styled.button`
 export const LoginButton3 = styled.button`
   width: 125px;
   height: 40px;
-  background: #FF5B90;
+  background: linear-gradient(116.82deg, #48cae4 -5%, #03045e 100%);
   border: none;
   border-radius: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -394,6 +411,8 @@ export const LoginButton3 = styled.button`
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
+
+  
 
   &:focus{
       outline: none;

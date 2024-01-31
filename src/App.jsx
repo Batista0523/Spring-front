@@ -16,11 +16,11 @@ import NewRoom from "./components/NewEventRoom";
 import NewBooking from "./components/NewBookingRoom";
 import { LoginWrapper } from "./styles/loginElements";
 import UserPortal from "./pages/UserPortal"
-import ProtectedRoute from "./components/utils/ProtectedRoute"
-import UserInfoEditForm from "./components/utils/UserInfoEditForm"
+import ProtectedRoute from "./components/ProtectedRoute"
+import UserInfoEditForm from "./components/UserInfoEditForm"
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
-import PublicRoute from "./components/utils/PublicRoute"
+import PublicRoute from "./components/PublicRoute"
 import { Reset } from 'styled-reset'
 import FourOFour from "./pages/FourOFour"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -34,7 +34,7 @@ function App() {
         <LoginWrapper>
           <Router>
             <NavBar currentUser={currentUser}
-                    setCurrentUser={setCurrentUser} />
+              setCurrentUser={setCurrentUser} />
             <Routes>
 
               {/* public route login */}
