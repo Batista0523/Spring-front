@@ -10,37 +10,66 @@
 .navBar-menu {
     margin-top: 30px;
     margin-bottom: -30px;
-    
+
     display: flex;
     justify-content: space-around;
     border-radius: 10px;
     border-style: none;
     width: 530px;
     font-size: 25px;
-    color:#7678ed;
+    color: #7678ed;
 }
 
 .nav-menu {
     color: white;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 19px;
     margin: 2px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-              rgba(0, 0, 0, 0.12) 0px -12px 30px,
-              rgba(0, 0, 0, 0.12) 0px 4px 6px,
-              rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-              rgba(0, 0, 0, 0.9) 0px -3px 5px;
-   
+    #48cae4 0px -12px 30px,
+    #03045e 0px 4px 6px,
+    #48cae4 0px 12px 13px,
+    #03045e 0px -3px 5px;
+
 }
 
 
 .nav-menu:hover {
+    border-radius: 30px;
     background-color: #90e0ef;
     color: #03045e;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-              rgba(0, 0, 0, 0.12) 0px -12px 30px,
-              rgba(0, 0, 0, 0.12) 0px 4px 6px,
-              rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-              rgba(0, 0, 0, 0.9) 0px -3px 5px;
+    box-shadow: #03045e 0px 54px 55px,
+        #48cae4 0px -12px 30px,
+        #03045e 0px 4px 6px,
+        #48cae4 0px 12px 13px,
+        #03045e 0px -3px 5px;
+}
+
+.navbar {
+    border-radius: 32px;
+    /* display: flex; */
+    position: fixed;
+    top: -3.9px;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.left {
+    margin-left: 20px;
+}
+
+.right {
+    margin-right: 20px;
 }
