@@ -11,7 +11,7 @@ export const LoginWrapper = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
   padding-bottom: 40px;
-  background: linear-gradient(116.82deg, #03045e 0%, #00b4d8 100%);
+  background: linear-gradient(116.82deg, #03045e -5%, #00b4d8 100%);
   min-height: 85vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
   rgba(0, 0, 0, 0.12) 0px -12px 30px,

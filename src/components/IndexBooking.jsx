@@ -22,10 +22,9 @@ const IndexBooking = () => {
 
   return (
     <div className="container-fluid">
-      {/* <h1 className="mb-4 text-center">Event Spaces</h1> */}
-      <div className="row">
+      <div >
         {bookings.map((booking) => (
-          <div key={booking.booking_id} className="col-lg-4 col-md-6 mb-4">
+          <div key={booking.booking_id} >
             <Booking
               booking={booking}
             />
