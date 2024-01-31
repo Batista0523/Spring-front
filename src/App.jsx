@@ -9,6 +9,7 @@ import ShowBooking from "./components/ShowBooking";
 import NewRoom from "./components/NewEventRoom";
 import NewBooking from "./components/NewBookingRoom";
 import { LoginWrapper } from "./styles/loginElements";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 
 function App() {
