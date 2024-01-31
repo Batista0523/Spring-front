@@ -136,3 +136,11 @@ display:flex;
   margin-left: -20px;
   margin-top:-20px;
 }
+
+.space{
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
