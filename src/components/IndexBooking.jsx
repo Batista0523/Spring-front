@@ -56,7 +56,7 @@ const IndexBooking = () => {
           >
             Previous
           </LoginButton2>
-          <span>Page {currentPage}</span>
+          <span className="space"> &nbsp; page&nbsp;{currentPage} of&nbsp;{Math.ceil(bookings.length/3)} &nbsp;</span>
           <LoginButton2
             className="atlBtnColor"
             onClick={() => paginate(currentPage + 1)}
