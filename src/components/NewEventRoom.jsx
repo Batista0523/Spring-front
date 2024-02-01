@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './newRoom.css'
+import "animate.css"
 const API = import.meta.env.VITE_API_URL;
 import {
   LoginButton3
@@ -44,7 +45,7 @@ const NewRoom = () => {
   };
 
   return (
-    <div className="contain animate__zoomInDown">
+    <div className="contain animate__animated animate__zoomInDown animate__rotateOut">
       <div className="bookings">
         <ul>
           <li className="noBorder">
