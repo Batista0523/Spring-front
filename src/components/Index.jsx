@@ -16,7 +16,7 @@ import {
   LoginButton4
 } from "../styles/loginElements";
 import "./index.css";
-
+import "animate.css"
 const Index = () => {
 
   const [items, setItems] = useState([]);
@@ -74,7 +74,7 @@ const Index = () => {
 
   return (
 
-    <div className="container-fluid">
+    <div className="container-fluid animate__animated animate__zoomIn">
       {/* <LoginBackground3 >
 
         <LoginHeaderV3>Find available rooms:</LoginHeaderV3>
@@ -166,7 +166,7 @@ const Index = () => {
         </Form>
       </LoginBackground3> */}
 
-      <div className="bookings">
+      <div className="bookings animate__animated animate__slideInRight">
         <ul>
 
           <li className="noBorder">

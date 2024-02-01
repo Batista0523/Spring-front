@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import './Booking.css'
 import { getAllBookings } from "../helpers/helperFunc";
 import { getAllItems } from "../helpers/helperFunc";
+import "animate.css"
 const API = import.meta.env.VITE_API_URL
 const Booking = ({ booking }) => {
     const [event, setEvent] = useState({
@@ -28,7 +29,7 @@ const Booking = ({ booking }) => {
 
 
     return (
-        <div className="bookings">
+        <div className="bookings animate__animated animate__zoomIn">
             <ul >
                 <Link to={`/events/${event.event_id}/bookings/${booking.booking_id}`} key={booking.booking_id} >
                     <li key={booking.booking_id}>
