@@ -1,0 +1,32 @@
+
+
+.container-fluid {
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .col-lg-4,
+  .col-md-6 {
+    flex: 1;
+  }
+  
+
+  .col-lg-4,
+  .col-md-6 {
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .col-lg-4:hover,
+  .col-md-6:hover {
+    transform: scale(1.05);
+  }
+  
+
+  

@@ -103,10 +103,10 @@ const ShowBooking = () => {
                             </div>
 
                             <div className="show-navigation">
-                                <button className="btn btn-dark btn-sm" onClick={handleDelete}>
+                                <button className="submit" onClick={handleDelete}>
                                     Cancel
                                 </button>
-                                <button className="btn btn-dark btn-sm" onClick={() => navigate(-1)}>
+                                <button className="submit" onClick={() => navigate(-1)}>
                                     Back
                                 </button>
                             </div>
