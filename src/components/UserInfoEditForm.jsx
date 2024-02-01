@@ -64,7 +64,7 @@ export default function UserInfoEditForm({ setCurrentUser, currentUser }) {
 
 
     return (
-        <div className="form-new-user animate__animated animate__zoomInLeft">
+        <div className="form-new-user animate__animated animate__fadeIn">
             <LoginBackground3 >
                 <LoginLabel>
                     
