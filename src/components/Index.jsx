@@ -3,9 +3,9 @@ import { getAllItems } from "../helpers/helperFunc";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Event from "../components/Event";
-import Form from "react-bootstrap/Form"
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import {
   LoginWrapper,
   LoginBackground3,
@@ -13,12 +13,11 @@ import {
   LoginButton2,
   LoginButton,
   LoginButton3,
-  LoginButton4
+  LoginButton4,
 } from "../styles/loginElements";
 import "./index.css";
 import "animate.css"
 const Index = () => {
-
   const [items, setItems] = useState([]);
   const [finding, setFind] = useState({
     startdate: "",
@@ -26,8 +25,8 @@ const Index = () => {
     enddate: "",
     endtime: "",
     floor: 0,
-    capacity: 0
-  })
+    capacity: 0,
+  });
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -45,7 +44,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const findAvailable = () => {
-    console.log("Compare to database availability!")
+    console.log("Compare to database availability!");
   };
 
   const handleInputChange = (e) => {
@@ -68,13 +67,17 @@ const Index = () => {
       enddate: "",
       endtime: "",
       floor: 0,
-      capacity: 0
+      capacity: 0,
     });
   };
 
   return (
 
+    <div className="container-fluid">
+
+
     <div className="container-fluid animate__animated animate__zoomIn">
+
       {/* <LoginBackground3 >
 
         <LoginHeaderV3>Find available rooms:</LoginHeaderV3>
@@ -168,7 +171,6 @@ const Index = () => {
 
       <div className="bookings animate__animated animate__slideInRight">
         <ul>
-
           <li className="noBorder">
             Find available rooms:
             <br></br>
@@ -176,17 +178,24 @@ const Index = () => {
             <form onSubmit={handleSubmit}>
               <div className="test">
                 Start: &nbsp;
-                <label className="startdate" htmlFor="startdate">Date: </label>
+                <label className="startdate" htmlFor="startdate">
+                  Date:{" "}
+                </label>
                 <input
+                className='input'
                   id="startdate"
                   value={finding.startdate}
                   type="date"
                   onChange={handleInputChange}
                   autoComplete="off"
                   required
-                /> &nbsp;
-                <label className="starttime" htmlFor="starttime">Time: </label>
+                />{" "}
+                &nbsp;
+                <label className="starttime" htmlFor="starttime">
+                  Time:{" "}
+                </label>
                 <input
+                className='input'
                   id="starttime"
                   value={finding.starttime}
                   type="time"
@@ -196,17 +205,24 @@ const Index = () => {
                 />
                 <br></br>
                 End: &nbsp;
-                <label className="enddate" htmlFor="enddate">Date:</label>
+                <label className="enddate" htmlFor="enddate">
+                  Date:
+                </label>
                 <input
+                className='input'
                   id="enddate"
                   value={finding.enddate}
                   type="date"
                   onChange={handleInputChange}
                   autoComplete="off"
                   required
-                /> &nbsp;
-                <label className="endtime" htmlFor="endtime">Time: </label>
+                />{" "}
+                &nbsp;
+                <label className="endtime" htmlFor="endtime">
+                  Time:{" "}
+                </label>
                 <input
+                className='input'
                   id="endtime"
                   value={finding.endtime}
                   type="time"
@@ -215,8 +231,11 @@ const Index = () => {
                   required
                 />
                 <br></br>
-                <label className="floor" htmlFor="floor">Floor:</label>
+                <label className="floor" htmlFor="floor">
+                  Floor:
+                </label>
                 <input
+                className='input'
                   id="floor"
                   value={finding.floor}
                   type="number"
@@ -225,22 +244,24 @@ const Index = () => {
                   required
                 />
                 <br></br>
-                <label className="capacity" htmlFor="capacity">Capacity:</label>
+                <label className="capacity" htmlFor="capacity">
+                  Capacity:
+                </label>
                 <input
+                className='input'
                   id="capacity"
                   value={finding.capacity}
                   type="number"
                   onChange={handleInputChange}
-
                   autoComplete="off"
                   required
                 />
                 <br></br>
                 <div className="test2">
-                  <LoginButton3 className="submit" type="submit"  >
+                  <LoginButton3 className="submit" type="submit">
                     Find
                   </LoginButton3>
-                  <LoginButton3 className="clear" onClick={handleReset} >
+                  <LoginButton3 className="clear" onClick={handleReset}>
                     Reset
                   </LoginButton3>
                 </div>
@@ -254,10 +275,8 @@ const Index = () => {
         <ul>
           {items.map((item) => (
             <Link to={`/events/${item.event_id}`} key={item.event_id}>
-              <li key={item.event_id} >
-
+              <li key={item.event_id}>
                 <Event
-
                   eventId={item.event_id}
                   eventname={item.eventname}
                   capacity={item.capacity}

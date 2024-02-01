@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import './bookingRoom.css'
 const API = import.meta.env.VITE_API_URL;
 
 const NewBooking = () => {
@@ -8,15 +8,15 @@ const NewBooking = () => {
 
   const formatISOWithoutSecondsAndMilliseconds = (date) => {
     const isoString = date.toISOString();
-    return isoString.slice(0, isoString.lastIndexOf(':'));
+    return isoString.slice(0, isoString.lastIndexOf(":"));
   };
 
   const [booking, setBooking] = useState({
-    meetingName: '',
+    meetingName: "",
     meetingInRoomId: 0,
     startDate: formatISOWithoutSecondsAndMilliseconds(new Date()),
     endDate: formatISOWithoutSecondsAndMilliseconds(new Date()),
-    attendees: '',
+    attendees: "",
     event_id: 1,
   });
   const [bookings, setBookings] = useState([]);
@@ -28,15 +28,17 @@ const NewBooking = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await fetch(`${API}/events/${booking.event_id}/bookings`);
+      const response = await fetch(
+        `${API}/events/${booking.event_id}/bookings`
+      );
       if (response.ok) {
         const data = await response.json();
         setBookings(data);
       } else {
-        console.error('Failed to fetch bookings');
+        console.error("Failed to fetch bookings");
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
@@ -44,22 +46,25 @@ const NewBooking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${API}/events/${booking.event_id}/bookings`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(booking),
-      });
+      const response = await fetch(
+        `${API}/events/${booking.event_id}/bookings`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(booking),
+        }
+      );
 
       if (response.ok) {
         await fetchBookings();
         navigate(`/events/${booking.event_id}`);
       } else {
-        console.error('Failed to create booking');
+        console.error("Failed to create booking");
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
@@ -72,6 +77,7 @@ const NewBooking = () => {
             <label>
               Meeting Name:
               <input
+              className='input'
                 type="text"
                 name="meetingName"
                 value={booking.meetingName}
@@ -82,6 +88,7 @@ const NewBooking = () => {
             <label>
               Meeting Room ID:
               <input
+              className='input'
                 type="number"
                 name="meetingInRoomId"
                 value={booking.meetingInRoomId}
@@ -92,6 +99,7 @@ const NewBooking = () => {
             <label>
               Start Date:
               <input
+              className='input'
                 type="datetime-local"
                 name="startDate"
                 value={booking.startDate}
@@ -102,6 +110,7 @@ const NewBooking = () => {
             <label>
               End Date:
               <input
+              className='input'
                 type="datetime-local"
                 name="endDate"
                 value={booking.endDate}
@@ -111,14 +120,16 @@ const NewBooking = () => {
             <br />
             <label>
               Attendees:
-              <textarea
+              <input
+              className='input'
+                type=""
                 name="attendees"
                 value={booking.attendees}
                 onChange={handleChange}
               />
             </label>
             <br />
-            <button type="submit">Create Booking</button>
+            <button className="btn" type="submit">Create Booking</button>
           </form>
         </li>
       </ul>

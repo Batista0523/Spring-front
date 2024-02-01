@@ -54,6 +54,7 @@ const NewRoom = () => {
               <label>
                 Room Name:
                 <input
+                className='input'
                   type="text"
                   name="eventName"
                   value={meeting.eventName}
@@ -64,6 +65,7 @@ const NewRoom = () => {
               <label>
                 Floor:
                 <input
+                className='input'
                   type="number"
                   name="floor"
                   value={meeting.floor}
@@ -74,6 +76,7 @@ const NewRoom = () => {
               <label>
                 Capacity:
                 <input
+                className='input'
                   type="number"
                   name="capacity"
                   value={meeting.capacity}
