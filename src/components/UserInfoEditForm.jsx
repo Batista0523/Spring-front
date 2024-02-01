@@ -13,6 +13,7 @@ import {
     LoginLabel,
     LoginButton2
 } from '../styles/loginElements'
+import "animate.css"
 const API = import.meta.env.VITE_API_URL
 
 export default function UserInfoEditForm({ setCurrentUser, currentUser }) {
@@ -63,7 +64,7 @@ export default function UserInfoEditForm({ setCurrentUser, currentUser }) {
 
 
     return (
-        <div className="form-new-user">
+        <div className="form-new-user animate__animated animate__fadeIn">
             <LoginBackground3 >
                 <LoginLabel>
                     

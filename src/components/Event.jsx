@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./event.css";
-
+import "animate.css"
 const Event = ({  eventname, capacity, floor }) => {
 
   return (
-    <div>
+    <div className="animate__animated animate__zoomIn">
       <div className="wrapper">
         <h2>{eventname}</h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-people-fill" viewBox="0 0 16 16">
